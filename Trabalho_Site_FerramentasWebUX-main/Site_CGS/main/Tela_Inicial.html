@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CGS - Loja Online</title>
+  <link rel="stylesheet" href="../style/Tela_Inicial.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <button class="menu-btn">☰</button>
+    <div class="logo">
+      <!-- Logo -->
+      <img src="../img/logo.png" alt="CGS Logo" />
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar..." />
+    </div>
+    <div class="icons">
+      <button class="user-btn">👤</button>
+       <!-- Carrinho (Checkbox para controlar o carrinho) -->
+  <input type="checkbox" id="cart-toggle">
+  <div class="cart-slide">
+    <!-- O "X" para fechar o carrinho -->
+    <label for="cart-toggle" class="cart-close">X</label>
+    <div class="cart-slide-content">
+      <div class="cart-slide-header">­Carrinho de Compras</div>
+      <div class="cart-item">Item 1 - R$10</div>
+      <div class="cart-item">Item 2 - R$15</div>
+      <div class="cart-item">Item 3 - R$20</div>
+    </div>
+  </div>
+
+  <!-- Botão de Carrinho -->
+  <label for="cart-toggle" class="cart-toggle" class="cart-btn">
+    🛒
+  </label>
+    </div>
+  </header>
+
+  <nav class="categories">
+    <!-- Ícones de categorias -->
+    <button class="categoria"><img src="../img/cat_1_button.png" alt="Cat1"></button>
+    <button class="categoria"><img src="../img/cat_2_button.png" alt="Cat2"></button>
+    <button class="categoria"><img src="../img/cat_3_button.png" alt="Cat3"></button>
+    <button class="categoria"><img src="../img/cat_4_button.png" alt="Cat4"></button>
+    <button class="categoria"><img src="../img/cat_5_button.png" alt="Cat5"></button>
+    <button class="categoria"><img src="../img/cat_6_button.png" alt="Cat3"></button>
+    <button class="categoria"><img src="../img/cat_7_button.png" alt="Cat4"></button>
+    <button class="categoria"><img src="../img/cat_8_button.png" alt="Cat5"></button>
+    <!-- ... -->
+  </nav>
+
+  <section class="highlight">
+    <h2>Destaques</h2>
+    <div class="banner">
+      <!-- Banner promocional -->
+      <img src="../img/promocao.PNG" alt="50% OFF" />
+    </div>
+  </section>
+
+  <section class="recommendations">
+    <h2>Recomendações</h2>
+    <div class="products">
+      <!-- Produto -->
+      <div class="product-card">
+        <img class="produto" src="../img/produto.webp" alt="Produto 1">
+        <p class="tag">O que você quer</p>
+        <h3>Notebook Gamer Acer</h3>
+        <p class="preco-antigo">R$ 5.999</p>
+        <p class="preco-novo">R$ 4.999 <span class="desconto">16% OFF</span></p>
+      </div>
+      <div class="product-card">
+        <img class="produto" src="../img/produto.webp" alt="Produto 1">
+        <p class="tag">O que você quer</p>
+        <h3>Notebook Gamer Acer</h3>
+        <p class="preco-antigo">R$ 5.999</p>
+        <p class="preco-novo">R$ 4.999 <span class="desconto">16% OFF</span></p>
+      </div>
+      <div class="product-card">
+        <img class="produto" src="../img/produto.webp" alt="Produto 1">
+        <p class="tag">O que você quer</p>
+        <h3>Notebook Gamer Acer</h3>
+        <p class="preco-antigo">R$ 5.999</p>
+        <p class="preco-novo">R$ 4.999 <span class="desconto">16% OFF</span></p>
+      </div>
+      <div class="product-card">
+        <img class="produto" src="../img/produto.webp" alt="Produto 1">
+        <p class="tag">O que você quer</p>
+        <h3>Notebook Gamer Acer</h3>
+        <p class="preco-antigo">R$ 5.999</p>
+        <p class="preco-novo">R$ 4.999 <span class="desconto">16% OFF</span></p>
+      </div>
+      <div class="product-card">
+        <img class="produto" src="../img/produto.webp" alt="Produto 1">
+        <p class="tag">O que você quer</p>
+        <h3>Notebook Gamer Acer</h3>
+        <p class="preco-antigo">R$ 5.999</p>
+        <p class="preco-novo">R$ 4.999 <span class="desconto">16% OFF</span></p>
+      </div>
+      <!-- Repita os cards -->
+    </div>
+  </section>
+
+  <!-- Carrinho (para futura implementação em JS) -->
+  <div class="cart-dropdown">
+    <h3>Carrinho</h3>
+    <div class="cart-item">
+      <img src="img/produto-carrinho.png" alt="Produto">
+      <div>
+        <p>Martelo Bosch GSH</p>
+        <p>R$200</p>
+      </div>
+    </div>
+    <!-- Repita conforme necessário -->
+    <p>Total: R$500</p>
+    <button class="btn-comprar">Comprar</button>
+  </div>
+</body>
+</html>
