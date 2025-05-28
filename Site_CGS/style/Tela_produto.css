@@ -369,7 +369,6 @@ input {
   margin: 0 auto;
 }
 
-/* Título */
 .inicial-tags {
   font-size: 1.8rem;
   margin-bottom: 15px;
@@ -377,23 +376,23 @@ input {
   text-align: center;
 }
 
-/* Container dos produtos - flex e scroll horizontal para melhor responsividade */
+
 .products {
   display: flex;
   gap: 30px;
   overflow-x: auto;
   padding-bottom: 10px;
-  -webkit-overflow-scrolling: touch; /* Suaviza o scroll no iOS */
+  -webkit-overflow-scrolling: touch; 
 }
 
-/* Link do produto */
+
 .btn-produto {
   text-decoration: none;
   color: black;
-  flex: 0 0 auto; /* mantém tamanho fixo, sem encolher */
+  flex: 0 0 auto;
 }
 
-/* Cartão do produto */
+
 .product-card {
   min-width: 160px;
   background: white;

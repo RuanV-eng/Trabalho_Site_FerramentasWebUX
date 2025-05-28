@@ -91,8 +91,8 @@ body {
   
 .icons {
   display: flex;
-  justify-content: flex-end; /* Alinha os ícones à direita */
-  gap: 20px; /* Espaço entre os ícones */
+  justify-content: flex-end;
+  gap: 20px; 
 }
 
 .icons button {
@@ -281,10 +281,10 @@ body {
   }
 }
 
-/* Carrinho de Compras */
+/* carrinho  */
 .cart-slide {
   position: fixed;
-  right: -300px; /* Começa fora da tela */
+  right: -300px; 
   bottom: 0;
   width: 300px;
   height: 100%;
@@ -294,12 +294,12 @@ body {
   transition: right 0.3s ease;
 }
 
-/* Quando o checkbox está marcado, o painel do carrinho desliza para a tela */
+/* faz o carriho desliza */
 #cart-toggle:checked + .cart-slide {
   right: 0;
 }
 
-/* Conteúdo do Carrinho */
+/* coisas do Carrinho */
 .cart-slide-content {
   padding: 20px;
   overflow-y: auto;
@@ -320,7 +320,7 @@ body {
   padding: 10px 0;
 }
 
-/* Botão "X" para Fechar o Carrinho */
+/* fecha o Carrinho */
 .cart-close {
   position: absolute;
   top: 10px;
@@ -330,15 +330,13 @@ body {
   color: #333;
   background: transparent;
   border: none;
-  display: none; /* Inicialmente, o X está oculto */
+  display: none; 
 }
 
-/* Exibe o "X" quando o carrinho está aberto */
 #cart-toggle:checked + .cart-slide .cart-close {
   display: block;
 }
 
-/* Esconde o botão de checkbox */
 #cart-toggle {
   display: none;
 }
