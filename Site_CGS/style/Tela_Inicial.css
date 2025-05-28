@@ -343,3 +343,15 @@ body {
   display: none;
 }
 
+.user-img{
+  width: auto;
+  height: 3vh;
+}
+
+.carrinho-img{
+    width: auto;
+  height: 3vh;
+  margin-right: 2vmin;
+  margin-left: 1vmin;
+}
+

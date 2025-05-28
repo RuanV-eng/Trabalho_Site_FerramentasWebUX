@@ -1,25 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela_produto</title>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGS - Notebook ACER</title>
     <link rel="stylesheet" href="../style/Tela_produto.css" />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <header class="top-nav">
-        <button class="menu-btn">☰</button>
-        <div class="logo">
-          <!-- Logo -->
-          <img src="../img/logo.png" alt="CGS Logo" />
+  <button class="menu-btn">☰</button>
+  <div class="logo">
+    <img src="../img/logo.png" alt="CGS Logo" />
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar..." />
+    <div class="suggestions">
+      <div class="suggestion-item">Notebook</div>
+      <div class="suggestion-item">mouse</div>
+      <div class="suggestion-item">teclado</div>
+      <div class="suggestion-item">roupas legais</div>
+      <div class="suggestion-item">chuveiro lorenzeti</div>
+      <div class="suggestion-item">bomba atomica</div>
+      <div class="suggestion-item">etc etc</div>
+    </div>
+  </div>
+  <div class="icons">
+    <a href="../main/cadastro.html" class="user-btn">
+  <img src="../img/user-icon.png" alt="Usuário" class="user-img" />
+</a>
+    <input type="checkbox" id="cart-toggle">
+    <div class="cart-slide">
+      <label for="cart-toggle" class="cart-close">X</label>
+      <div class="cart-slide-content">
+        <div class="cart-slide-header">Carrinho de Compras</div>
+        <div class="cart-item">Item 1 - R$10</div>
+        <div class="cart-item">Item 2 - R$15</div>
+        <div class="cart-item">Item 3 - R$20</div>
+      </div>
+    </div>
+    <label for="cart-toggle" class="cart-toggle cart-btn"><img src="../img/icon-carrinho.png" alt="carrinho de compras" class="carrinho-img"></label>
+  </div>
+</header>
+    <main class="container">
+      <div class="product-details">
+        <div class="product-gallery">
+          <img src="../img/produto.webp" alt="notebook" />
+          <div class="gallery-thumbnails">
+            <img src="../img/produto.webp" alt="notebook - Detalhe 1" />
+            <img src="../img/produto.webp" alt="notebook - Detalhe 2" />
+            <img src="../img/produto.webp" alt="notebook - Detalhe 3" />
+          </div>
         </div>
-        <div class="search-bar">
-          <input type="text" placeholder="Buscar..." />
+        <div class="product-info">
+          <p class="product-path">
+            <i class="fas fa-chevron-right"></i> Tecnologia / Notebooks 
+          </p>
+          <h2>Notebook Acer 16 GB ram - Gamer</h2>
+          <p class="product-code">Código do Produto: 123456789</p>
+          <p class="price">R$ 4500,00</p>
+          <p class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i
+            ><i class="fas fa-star"></i><i class="fas fa-star"></i
+            ><i class="fas fa-star-half-alt"></i> 45 avaliações
+          </p>
+          <p class="product-description">
+            Notebook Acer Nitro V15 ANV15-51-
+            58AZ Core I5-13420h 8gb 512gb
+             Rtx 3050 Cor Preto
+          </p>
+          <div class="product-options">
+            <label for="memoria">Memoria:</label>
+            <select id="memoria">
+              <option>256GB SSD</option>
+              <option>460GB SSD</option>
+              <option>756GB SDD</option>
+            </select>
+            <label for="quantity">Quantidade:</label>
+            <input type="number" id="quantity" value="1" />
+          </div>
+          <div class="buttons">
+            <button class="add-to-cart">
+              <i class="fas fa-shopping-cart"></i> Adicionar ao carrinho
+            </button>
+            <button class="add-to-wishlist">
+              <i class="fas fa-heart"></i> Adicionar à lista de desejos
+            </button>
+          </div>
+          <p class="delivery">
+            <i class="fas fa-truck"></i> Estimativa de Entrega: Consulte nossos
+            Termos e Condições
+          </p>
         </div>
-        <div class="icons">
-          <button class="user-btn">👤</button>
-          <button class="cart-btn">🛒</button>
+      </div>
+        <section class="recommendations">
+    <h2 class="inicial-tags">Produtos semelhantes:</h2>
+    <div class="products">
+        <div class="product-card">
+          <img class="produto" src="../img/produto.webp" alt="Produto 1" />
+          <p class="textpro" class="tag">O que você quer</p>
+          <h3 class="textpro">Notebook Gamer Acer</h3>
+          <p class="preco-antigo">R$ 5.999</p>
+          <p class="preco-novo">R$ 4.999 <span class="desconto">16% OFF</span></p>
         </div>
-      </header>
-</body>
+        <div class="product-card">
+          <img class="produto" src="../img/produto.webp" alt="Produto 1" />
+          <p class="textpro" class="tag">O que você quer</p>
+          <h3 class="textpro">Notebook Gamer Acer</h3>
+          <p class="preco-antigo">R$ 5.999</p>
+          <p class="preco-novo">R$ 4.999 <span class="desconto">16% OFF</span></p>
+        </div>
+        <div class="product-card">
+          <img class="produto" src="../img/produto.webp" alt="Produto 1" />
+          <p class="textpro" class="tag">O que você quer</p>
+          <h3 class="textpro">Notebook Gamer Acer</h3>
+          <p class="preco-antigo">R$ 5.999</p>
+          <p class="preco-novo">R$ 4.999 <span class="desconto">16% OFF</span></p>
+        </div>
+        <div class="product-card">
+          <img class="produto" src="../img/produto.webp" alt="Produto 1" />
+          <p class="textpro" class="tag">O que você quer</p>
+          <h3 class="textpro">Notebook Gamer Acer</h3>
+          <p class="preco-antigo">R$ 5.999</p>
+          <p class="preco-novo">R$ 4.999 <span class="desconto">16% OFF</span></p>
+        </div>
+        <div class="product-card">
+          <img class="produto" src="../img/produto.webp" alt="Produto 1" />
+          <p class="textpro" class="tag">O que você quer</p>
+          <h3 class="textpro" >Notebook Gamer Acer</h3>
+          <p class="preco-antigo">R$ 5.999</p>
+          <p class="preco-novo">R$ 4.999 <span class="desconto">16% OFF</span></p>
+        </div>
+        
+      <!-- Repita os cards conforme necessidade -->
+    </div>
+  </section>
+    </main>
+  </body>
 </html>
