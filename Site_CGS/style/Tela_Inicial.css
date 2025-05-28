@@ -271,7 +271,6 @@ body {
   }
 }
 
-/* carrinho  */
 .cart-slide {
   position: fixed;
   right: -300px; 
@@ -284,12 +283,11 @@ body {
   transition: right 0.3s ease;
 }
 
-/* faz o carriho desliza */
 #cart-toggle:checked + .cart-slide {
   right: 0;
 }
 
-/* coisas do Carrinho */
+
 .cart-slide-content {
   padding: 20px;
   overflow-y: auto;
@@ -310,7 +308,7 @@ body {
   padding: 10px 0;
 }
 
-/* fecha o Carrinho */
+
 .cart-close {
   position: absolute;
   top: 10px;
@@ -341,5 +339,41 @@ body {
   height: 3vh;
   margin-right: 2vmin;
   margin-left: 1vmin;
+}
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: hideLoading 0.5s ease forwards;
+  animation-delay: 1s; 
+  z-index: 9999;
+}
+
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #add8f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes hideLoading {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
