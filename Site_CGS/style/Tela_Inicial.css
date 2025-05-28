@@ -148,15 +148,7 @@ body {
   margin-bottom: 10px;
 }
 
-.highlight, .seen {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-}
 
-.highlight h2, .seen h2 {
-  margin-bottom: 10px;
-}
 
 .banner{
   display: flex;
@@ -167,9 +159,7 @@ body {
 .inicial-tags{
   margin-left: 15%;
 }
-#id-text-vistos{
-  margin-left: -0%;
-}
+
 
 .banner img {
   width: 70%;

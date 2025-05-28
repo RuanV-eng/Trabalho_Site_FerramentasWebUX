@@ -14,7 +14,7 @@ body {
     align-content: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #acd4fc
 
 ;
@@ -26,15 +26,23 @@ body {
     background-color: #fff;
     border-radius:50px;
     padding: 40px;
+    margin: 10vmin;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
     gap: 5px
 }
 
-.logo{
+.logo1{
+    position:absolute;
+    right:32%;
     height: auto;
     width: 200px;
-    position: absolute;
-    right: 80vmin;
+}
+
+.logo2{
+    position:absolute;
+    right:34%;
+    height: auto;
+    width: 200px;
 }
 
 .areaLogin img {
