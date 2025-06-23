@@ -4,31 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Redefinir Senha</title>
     <link rel="stylesheet" href="../style/login.css" />
-    <script src="../scripts/login.js"></script>
+    <script src="../scripts/recuperar.js"></script>
 </head>
 <body>
     <div class="loading-screen">
         <div class="spinner"></div>
       </div>
     <div class="page">
-        <form method="POST" id="formLogin" class="formLogin">
-            <div class="titulo">
-            <h1>Login</h1>
+        <form method="POST" id="formRecuperar" class="formLogin">
+            <h1>Redefinir de Senha</h1>
             
             <a href="../main/Tela_Inicial.html" class="logo-link">
             <img src="../img/logo.png" alt="logo-cgs" class="logo2" />
             </a>
-            </div>
-            <p>Digite suas informações abaixo.</p>
+            <p>Digite suas informações abaixo.ㅤㅤㅤㅤㅤㅤㅤㅤ</p>
             <label for="email">E-mail</label>
             <input type="email" id="email" placeholder="Digite seu e-mail" autofocus="true" />
-            <label for="password">Senha</label>
-            <input type="password" id="senha" placeholder="Digite sua senha" />
-            <button onclick="window.location.href='recuperar.html'" type="button" class="b1">Esqueci minha senha</button>
-            <button onclick="window.location.href='cadastro.html'" type="button" class="b1">Ainda não tem uma conta? Cadastre-se.</button>
-            <button onclick="login(event)" type="submit" class="btn">Acessar</button>
+            <button onclick="recuperar(event)" type="submit" class="btn">Redefinir senha</button>
         </form>
     </div>
 </body>

@@ -6,34 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro</title>
     <link rel="stylesheet" href="../style/login.css" />
+    <script src="../scripts/cadastro.js"></script>
 </head>
 <body>
     <div class="loading-screen">
         <div class="spinner"></div>
       </div>
     <div class="page">
-        <form method="POST" class="formLogin">
+        <form method="POST" id="formCadastro" class="formLogin">
+            <div class="titulo">
             <h1>Cadastro</h1>
             <a href="../main/Tela_Inicial.html" class="logo-link">
-            <img src="../img/logo.png" alt="logo-cgs" class="logo1" />
+            <img src="../img/logo.png" alt="logo-cgs" class="logo2" />
             </a>
-            <p>Preencha os dados para criar sua conta.ㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+            </div>
+            <p>Preencha os dados para criar sua conta.</p>
 
             <label for="nome">Nome completo</label>
-            <input type="text" placeholder="Digite seu nome completo" required />
+            <input type="text" id="nome" placeholder="Digite seu nome completo" required />
 
             <label for="email">E-mail</label>
-            <input type="email" placeholder="Digite seu e-mail" required />
+            <input type="email" id="email" placeholder="Digite seu e-mail" required />
 
             <label for="password">Senha</label>
-            <input type="password" placeholder="Digite sua senha" required />
+            <input type="password" id="senha" placeholder="Digite sua senha" required />
 
             <label for="confirmar">Confirmar senha</label>
-            <input type="password" placeholder="Confirme sua senha" required />
+            <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required />
 
-            <a href="../main/Tela_Inicial.html" class="btn">Cadastrar</a>
+            <button onclick="cadastrar(event)" type="submit" class="btn">Cadastrar</button>
 
-            <a href="login.html">Já tem uma conta? Fazer login</a>
+            <button onclick="window.location.href='login.html'" type="button" class="b1">Já tem uma conta? Fazer login</button>
         </form>
     </div>
 </body>
