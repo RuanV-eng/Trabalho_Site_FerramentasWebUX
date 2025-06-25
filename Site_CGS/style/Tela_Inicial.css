@@ -13,6 +13,7 @@ body {
   background-color: black;
 }
 
+
 .top-nav {
   display: flex;
   align-items: center;
@@ -160,6 +161,9 @@ body {
   margin-left: 15%;
 }
 
+#id-text-vistos{
+  margin-left: 15%;
+}
 
 .banner img {
   width: 70%;
@@ -327,6 +331,11 @@ body {
 
 #cart-toggle {
   display: none;
+}
+
+
+#user-info{
+  margin-right: 33px;
 }
 
 .user-img{
