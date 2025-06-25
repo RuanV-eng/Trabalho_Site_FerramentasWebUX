@@ -1,9 +1,13 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
-  color: #e0e0e0;
+  color: black;
   margin: 0;
   padding: 0;
+}
+
+#user-info{
+  margin-right: 33px;
 }
 
 .top-nav {

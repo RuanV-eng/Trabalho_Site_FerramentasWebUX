@@ -1,3 +1,87 @@
+function inicializarUsuario() {
+  const userInfoDiv = document.getElementById("user-info");
+  const userEmailSpan = document.getElementById("user-email");
+
+  const usuarioLogado = JSON.parse(storage.getItem("usuarioLogado"));
+
+  if (usuarioLogado && usuarioLogado.nome) {
+    const primeiroNome = usuarioLogado.nome.split(" ")[0];
+    userEmailSpan.textContent = primeiroNome;
+    userInfoDiv.style.display = "inline-block";
+
+    userInfoDiv.addEventListener("click", function () {
+      mostrarMenuUsuario();
+    });
+  } else {
+    userInfoDiv.style.display = "none";
+  }
+}
+
+function mostrarMenuUsuario() {
+  const existingMenu = document.getElementById('user-dropdown');
+  if (existingMenu) {
+    existingMenu.remove();
+    return;
+  }
+
+  const dropdown = document.createElement('div');
+  dropdown.id = 'user-dropdown';
+  dropdown.style = `
+    position: absolute;
+    top: 60px;
+    right: 100px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 10px;
+    z-index: 1000;
+    min-width: 180px;
+  `;
+  dropdown.innerHTML = `
+    <div style="padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold;">
+      Minha Conta
+    </div>
+    <div onclick="irParaPerfil()" style="padding: 8px 12px; cursor: pointer; border-bottom: 1px solid #eee;">
+      Meu Perfil
+    </div>
+    <div onclick="irParaPedidos()" style="padding: 8px 12px; cursor: pointer; border-bottom: 1px solid #eee;">
+      Meus Pedidos
+    </div>
+    <div onclick="logout()" style="padding: 8px 12px; cursor: pointer; color: #d32f2f;">
+      Sair
+    </div>
+  `;
+  document.body.appendChild(dropdown);
+
+  setTimeout(() => {
+    document.addEventListener('click', function closeMenu(e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.remove();
+        document.removeEventListener('click', closeMenu);
+      }
+    });
+  }, 100);
+}
+
+function logout() {
+  storage.setItem("usuarioLogado", "");
+  alert("Logout realizado com sucesso!");
+  window.location.reload();
+}
+
+function irParaPerfil() {
+  alert("Funcionalidade de perfil será implementada em breve!");
+}
+
+function irParaPedidos() {
+  alert("Funcionalidade de pedidos será implementada em breve!");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  inicializarUsuario();
+});
+
 // Sistema de armazenamento adaptável
 const storage = {
   getItem: function(key) {
@@ -418,6 +502,87 @@ function adicionarAListaDesejos() {
   }
 }
 
+function inicializarMenuMobile() {
+  const menuBtn = document.querySelector('.menu-btn');
+  
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      mostrarMenuMobile();
+    });
+  }
+}
+
+function mostrarMenuMobile() {
+  const existingMenu = document.getElementById('mobile-menu');
+  if (existingMenu) {
+    existingMenu.remove();
+    return;
+  }
+
+const menu = document.createElement('div');
+menu.id = 'mobile-menu';
+menu.innerHTML = `
+  <div style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    display: flex;
+  ">
+    <div style="
+      width: 280px;
+      height: 100%;
+      background: #f9f9f9;
+      padding: 20px;
+      overflow-y: auto;
+    ">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h3 style="color: black;">Menu</h3>
+        <button onclick="document.getElementById('mobile-menu').remove()" style="
+          background: none;
+          border: none;
+          font-size: 24px;
+          cursor: pointer;
+        ">×</button>
+      </div>
+      
+      <div style="margin-bottom: 20px;">
+        <h4 style="color: black;">Categorias <img src="../img/icon-carrinho.png" alt="carrinho de compras" style="width: 18px; height: auto;"/></h4>
+        <div onclick="irParaCategoria('eletronicos')" style="padding: 10px 0; border-bottom: 1px solid #eee; cursor: pointer; color: black;"><img src="../img/cat_4_button.png" alt="Cat4" style="width: 20px; height: auto;"> Eletrônicos</div>
+        <div onclick="irParaCategoria('roupas')" style="padding: 10px 0; border-bottom: 1px solid #eee; cursor: pointer; color: black;"><img src="../img/cat_3_button.png" alt="Cat3" style="width: 20px; height: auto;"> Roupas</div>
+        <div onclick="irParaCategoria('casa')" style="padding: 10px 0; border-bottom: 1px solid #eee; cursor: pointer; color: black;"><img src="../img/cat_5_button.png" alt="Cat5" style="width: 20px; height: auto;"> Casa</div>
+        <div onclick="irParaCategoria('livros')" style="padding: 10px 0; border-bottom: 1px solid #eee; cursor: pointer; color: black;"><img src="../img/cat_8_button.png" alt="Cat5" style="width: 20px; height: auto;"> Livros</div>
+      </div>
+      
+      <div>
+        <h4 style="color: black;">Conta <img src="../img/user-icon.png" alt="Usuário" style="width: 18px; height: auto;" /></h4>
+        <div onclick="irParaLogin()" style="padding: 10px 0; border-bottom: 1px solid #eee; cursor: pointer; color: black;"> Login</div>
+        <div onclick="irParaCadastro()" style="padding: 10px 0; border-bottom: 1px solid #eee; cursor: pointer; color: black;"> Cadastrar</div>
+      </div>
+    </div>
+    <div style="flex: 1;" onclick="document.getElementById('mobile-menu').remove()"></div>
+  </div>
+`;
+
+document.body.appendChild(menu);
+}
+
+function irParaCategoria(categoria) {
+  storage.setItem("categoriaSelecionada", categoria);
+  window.location.href = "../main/tela_produto.html";
+}
+
+function irParaLogin() {
+  window.location.href = "../main/login.html";
+}
+
+function irParaCadastro() {
+  window.location.href = "../main/cadastro.html";
+}
+
 // Atualizar display do carrinho
 function atualizarDisplayCarrinho() {
   const cartContent = document.querySelector('.cart-slide-content');
@@ -622,6 +787,7 @@ document.addEventListener('DOMContentLoaded', function() {
   inicializarBotoesCarrinho();
   registrarProdutoVisto();
   atualizarDisplayCarrinho();
+  inicializarMenuMobile();
   
   console.log('Sistema de produto inicializado com sucesso!');
 });

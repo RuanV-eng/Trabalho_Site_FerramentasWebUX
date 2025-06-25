@@ -103,7 +103,7 @@ function mostrarMenuUsuario() {
 function logout() {
   storage.setItem("usuarioLogado", "");
   alert("Logout realizado com sucesso!");
-  location.reload();
+  window.location.reload();
 }
 
 function irParaPerfil() {
